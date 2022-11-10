@@ -10,9 +10,12 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     dplyr,
+    likert,
     lubridate,
     readr,
     REDCapR
 RoxygenNote: 7.1.2
 URL: https://github.com/andrew-vancil/SAFEhelpers
 BugReports: https://github.com/andrew-vancil/SAFEhelpers/issues
+Depends: 
+    R (>= 2.10)
