@@ -7,7 +7,9 @@
 gift_card_list(url, token)
 }
 \arguments{
-\item{token}{}
+\item{url}{Your redcap project url}
+
+\item{token}{Your personal redcap project token}
 }
 \value{
 
