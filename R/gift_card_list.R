@@ -2,8 +2,8 @@
 #'
 #' Input your REDCap project url and token and generate a csv file containing all eligible gift card recipients for the past month
 #'
-#' @param url
-#' @param token
+#' @param url Your redcap project url
+#' @param token Your personal redcap project token
 #'
 #' @return
 #' @export
