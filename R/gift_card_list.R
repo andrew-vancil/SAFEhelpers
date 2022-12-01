@@ -62,6 +62,6 @@ gift_card_list <- function(url, token) {
            gift_card_method = coalesce(consent_how_gift_card_eng, consent_how_gift_card_span)) |>
     select(-contains("eng"), -contains("span"))
 
-  readr::write_csv(d_gc_final, paste0("monthly_summaries/",lubridate::month(today(), label = T, abbr = F),"_gift_card_list.csv"))
+  readr::write_csv(d_gc_final, paste0("monthly_summaries/",lubridate::month(lubridate::today(), label = T, abbr = F),"_gift_card_list.csv"))
 
 }
