@@ -2,8 +2,11 @@ Package: SAFEhelpers
 Type: Package
 Title: SAFE project helper functions
 Version: 0.1.0
-Author: Andrew Vancil
-Maintainer: andrew.vancil@cchmc.org
+Authors@R: c(
+    person(given = "Andrew",
+           family = "Vancil",
+           role = c("aut", "cre"),
+           email = "andrew.vancil@cchmc.org")
 Description: This package contains functions to expedite SAFE survey data analysis
 License: MIT + file LICENSE
 Encoding: UTF-8
