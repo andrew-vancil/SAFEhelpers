@@ -15,8 +15,8 @@ gift_card_list <- function(url, token) {
   my_url <- url
   my_token <- token
 
-  data <- redcap_read(redcap_uri = my_url,
-                      token = my_token[[1]],
+  data <- REDCapR::redcap_read(redcap_uri = my_url,
+                      token = my_token,
                       export_checkbox_label = TRUE,
                       export_survey_fields = TRUE,
                       raw_or_label = 'label')$data
@@ -31,7 +31,7 @@ gift_card_list <- function(url, token) {
   d_gc <- d_gc |>
     filter(food_equity_english_complete == 'Complete' | food_equity_spanish_complete == 'Complete' | demographics_english_complete == 'Complete' | demographics_spanish_complete == 'Complete') |>
     filter(lubridate::date(food_equity_english_timestamp) %in% dates | lubridate::date(food_equity_spanish_timestamp) %in% dates |
-             demographics_english_timestamp %in% dates | demographics_spanish_timestamp %in% dates)
+             lubridate::date(demographics_english_timestamp) %in% dates | lubridate::date(demographics_spanish_timestamp) %in% dates)
 
   #only keep weeks where people took one survey and took longer than 15 seconds
   d_gc <- d_gc |>
