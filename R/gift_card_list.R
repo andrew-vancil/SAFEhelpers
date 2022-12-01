@@ -30,7 +30,7 @@ gift_card_list <- function(url, token) {
 
   d_gc <- d_gc |>
     filter(food_equity_english_complete == 'Complete' | food_equity_spanish_complete == 'Complete' | demographics_english_complete == 'Complete' | demographics_spanish_complete == 'Complete') |>
-    filter(date(food_equity_english_timestamp) %in% dates | date(food_equity_spanish_timestamp) %in% dates |
+    filter(lubridate::date(food_equity_english_timestamp) %in% dates | lubridate::date(food_equity_spanish_timestamp) %in% dates |
              demographics_english_timestamp %in% dates | demographics_spanish_timestamp %in% dates)
 
   #only keep weeks where people took one survey and took longer than 15 seconds
