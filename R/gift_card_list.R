@@ -11,7 +11,6 @@
 #' @examples
 #' gift_card_list(my_url, my_token)
 #'
-library(dplyr)
 gift_card_list <- function(url, token) {
   library(dplyr)
 
